@@ -4,14 +4,9 @@ class Solution:
         sorted_prices=sorted(prices)
         
         count = 0
-        for i in range(len(sorted_prices)):
-            if count<2 and (remaining_money - sorted_prices[i])>=0:
-                remaining_money = remaining_money - sorted_prices[i]
-                count += 1
-            else:
-                break
+        remaining_money = money - sorted_prices[0] - sorted_prices[1]
         
-        if count==2:
+        if remaining_money >= 0:
             return remaining_money
         else:
             return money
