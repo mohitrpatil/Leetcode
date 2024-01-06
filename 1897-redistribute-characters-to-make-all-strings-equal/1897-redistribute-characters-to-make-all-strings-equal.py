@@ -7,8 +7,6 @@ class Solution:
         
         d = Counter(string)
         for key, values in d.items():
-            if values % w == 0:
-                continue
-            else:
+            if values % w != 0:
                 return False
         return True
