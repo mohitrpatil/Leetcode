@@ -16,7 +16,6 @@ class Solution:
         if i >= n:
             return len(string)
         
-        print(string)
         if self.checkunique(string, arr[i]):
             include = self.dfs(i+1, arr, string+arr[i], n)
             exclude = self.dfs(i+1, arr, string, n)
