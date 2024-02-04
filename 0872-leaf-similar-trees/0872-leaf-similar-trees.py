@@ -6,6 +6,7 @@
 #         self.right = right
 class Solution:
     def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
+        
         x = []
         y = []
         
@@ -24,13 +25,8 @@ class Solution:
             return p
     
         x = traverseleaf(root1, x)
-        # print(x)
         y = traverseleaf(root2, y)
-        # print(y)
         
         if x == y:
             return True
         return False
-        
-        
-            
