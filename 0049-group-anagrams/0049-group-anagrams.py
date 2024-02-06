@@ -3,8 +3,7 @@ class Solution:
         c = defaultdict(list)
         
         for i in range(len(strs)):
-            x = tuple(sorted(strs[i]))
-            c[x].append(strs[i])
+            c[tuple(sorted(strs[i]))].append(strs[i])
             
         ans = []
         for key, value in c.items():
