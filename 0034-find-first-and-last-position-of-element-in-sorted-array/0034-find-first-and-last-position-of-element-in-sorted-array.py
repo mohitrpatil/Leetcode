@@ -5,7 +5,6 @@ class Solution:
         
         for i, n in enumerate(nums):
             count[n].append(i)
-
         
         if target in count.keys():
             return [count[target][0],count[target][-1]]
