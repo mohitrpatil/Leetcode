@@ -3,6 +3,7 @@ class Solution:
         
         pos = []
         neg = []
+        
         for i in nums:
             if i < 0:
                 neg.append(i)
@@ -13,8 +14,6 @@ class Solution:
         for i in range(len(pos)):
             ans.append(pos[i])
             ans.append(neg[i])
-            
-        print(ans)
         
         return ans
             
