@@ -4,9 +4,7 @@ class Solution:
         if len(arr) == k:
             return 0
         
-        count = Counter(arr)
-        
-        sorted_count = {key: value for key, value in sorted(count.items() ,key=lambda item:item[1])}
+        sorted_count = {key: value for key, value in sorted(Counter(arr).items() ,key=lambda item:item[1])}
         
         x = list(sorted_count.keys())
         y = list(sorted_count.values())
