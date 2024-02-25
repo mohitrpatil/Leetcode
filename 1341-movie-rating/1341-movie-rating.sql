@@ -10,12 +10,11 @@ order by x.cnt desc, u.name
 limit 1),
 
 cte2 as 
-(
-    select m.title from
-    (select movie_id , avg(rating) as avg1
-    from movierating
-    where extract(month from created_at) = '02' and extract(year from created_at) = '2020'
-    group by movie_id) as x
+(select m.title from
+(select movie_id , avg(rating) as avg1
+from movierating
+where month(created_at) = '02' and year(created_at) = '2020'
+group by movie_id) as x
 left join Movies as m
 on x.movie_id = m.movie_id
 order by x.avg1 desc, m.title asc
