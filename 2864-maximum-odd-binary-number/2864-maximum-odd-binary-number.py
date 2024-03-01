@@ -4,7 +4,7 @@ class Solution:
         count = Counter(s)
 
         number_of_1s = count['1']-1
-        number_of_0s = count['0']
+        number_of_0s = count['0']   
 
         ans = ""
         for i in range(number_of_1s):
