@@ -5,7 +5,6 @@ class Solution:
         set2 = set(nums2)
         
         c = set1.intersection(set2)
-        print(c)
         
         if len(c)>0:
             return sorted(list(c))[0]
