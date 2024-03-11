@@ -5,16 +5,12 @@ class Solution:
         ans = ""
 
         for i in range(len(order)):
-            x = order[i]
-            if x in count.keys():
-                # for i in range(count[x]):
-                ans += x * count[x]
-                
-                count[x] = 0
+            if order[i] in count.keys():
+                ans += order[i] * count[order[i]]
+                count[order[i]] = 0
 
         for key, value in count.items():
             if value >0:
-                # for i in range(count[key]):
                 ans += key * count[key]
 
         return ans
