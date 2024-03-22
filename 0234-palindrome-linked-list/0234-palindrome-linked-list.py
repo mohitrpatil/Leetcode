@@ -9,13 +9,12 @@ class Solution:
         a = []
         
         while head:
-            a.append(head.val)
+            a.append(str(head.val))
             head = head.next
 
         s =""
-        x = [str(i) for i in a]
         
-        for i in x:
+        for i in a:
             s += i
             
         if s == s[::-1]:
