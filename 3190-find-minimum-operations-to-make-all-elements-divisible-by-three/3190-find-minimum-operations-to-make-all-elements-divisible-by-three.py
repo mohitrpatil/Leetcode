@@ -4,7 +4,7 @@ class Solution:
         x = []
         
         ref = [3*i for i in range(50)]
-        print(ref)
+        # print(ref)
         
         for i in range(len(nums)):
             mini = 9999999
@@ -12,5 +12,5 @@ class Solution:
                 mini = min(mini, abs (nums[i] - ref[j]))
                 
             x.append(mini)
-        print(x)
+        # print(x)
         return sum(x)
