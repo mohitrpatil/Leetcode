@@ -4,16 +4,16 @@ class Solution:
         sorted_nums = sorted(nums)
         
         if len(sorted_nums) > 3:
-            mini = 9999999999999999
+            arr = []
             x = sorted_nums[-1] - sorted_nums[3]
-            mini = min(mini, x)
+            arr.append(x)
             y = sorted_nums[-4] - sorted_nums[0]
-            mini = min(mini, y)
+            arr.append(y)
             u = sorted_nums[-2] - sorted_nums[2]
-            mini = min(mini, u)
+            arr.append(u)
             z = sorted_nums[-3] - sorted_nums[1]
-            mini = min(mini, z)
-            return mini
+            arr.append(z)
+            return min(arr)
         else:
             return 0
             
